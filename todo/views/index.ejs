@@ -1,0 +1,46 @@
+<html>
+<head> 
+<title> To-Do App </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+<h2> To-Do List </h2>
+
+<form action ="/addtask" method="POST">
+
+<script>
+function success() {
+    if(document.getElementById("07").value==="") { 
+           document.getElementById('button').disabled = true; 
+       } else { 
+           document.getElementById('button').disabled = false;
+       }
+   }
+</script>
+<textarea class="input" id="07" onkeyup="success()" name="newtask" placeholder="Enter your task..."></textarea>
+<button type="submit" id="button" disabled>Add Task</button>
+
+
+
+<h2> Task Added </h2>
+
+<% for( var i = 0; i < task.length; i++){ %>
+    <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
+<% } %>
+
+<button formaction="/removetask" type="submit" id="top"> Delete </button>
+</form>
+
+<h2> Task Completed </h2>
+
+ <% for(var i = 0; i < complete.length; i++){ %>
+    <li><input type="checkbox" checked><%= complete[i] %> </li>
+<% } %>
+
+</div>
+
+</body>
+</html>

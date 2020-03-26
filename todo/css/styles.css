@@ -1,0 +1,21 @@
+* {
+    font-family: "georgia", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: rgb(243, 237, 237);
+    color: #000000;
+    margin-top: 20px;
+}
+
+.container {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
